@@ -33,12 +33,12 @@ def draw_template(save_path_pdf="antibiotic_disc_template_7_branches.pdf",
         rad = np.deg2rad(ang)
         x = disc_center_radius_mm * np.cos(rad)
         y = disc_center_radius_mm * np.sin(rad)
-        ax.plot(x, y, marker='o', markersize=30, color='gray')
+        ax.plot(x, y, marker='o', markersize=30, color='blue')
        # Small tick mark towards center to help placement
         tick_inset_mm = 20
         x_in = (disc_center_radius_mm - tick_inset_mm) * np.cos(rad)
         y_in = (disc_center_radius_mm - tick_inset_mm) * np.sin(rad)
-        ax.plot([x_in, x], [y_in, y], linewidth=15, color='gray')
+        ax.plot([x_in, x], [y_in, y], linewidth=15, color='blue')
 
         # Label slightly outside the point
         label_offset_mm = 0
